@@ -3,40 +3,112 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ContactVault - Support</title>
+    <title>Support - ContactVault</title>
     <style>
-        body {
-            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
-            max-width: 800px;
-            margin: 0 auto;
-            padding: 20px;
-            line-height: 1.6;
-            color: #333;
-        }
-        h1 { color: #1a1a1a; border-bottom: 2px solid #eee; padding-bottom: 10px; }
-        h2 { color: #444; margin-top: 30px; }
-        h3 { color: #555; }
-        .contact { background: #f8f9fa; padding: 20px; border-radius: 8px; margin-top: 20px; }
-        a { color: #0066cc; text-decoration: none; }
-        a:hover { text-decoration: underline; }
-        ul, ol { padding-left: 20px; }
-        li { margin-bottom: 8px; }
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; background: #f5f5f7; color: #333; line-height: 1.6; }
+        .container { max-width: 900px; margin: 0 auto; padding: 40px 20px; }
+        h1 { color: #1a1a1a; font-size: 2.5em; margin-bottom: 10px; border-bottom: 3px solid #007AFF; padding-bottom: 15px; }
+        .intro { color: #666; font-size: 1.1em; margin-bottom: 40px; }
+        h2 { color: #007AFF; font-size: 1.8em; margin: 40px 0 20px; }
+        .faq-section { background: white; border-radius: 16px; padding: 30px; margin: 20px 0; box-shadow: 0 2px 10px rgba(0,0,0,0.05); }
+        .faq-item { margin-bottom: 25px; padding-bottom: 25px; border-bottom: 1px solid #eee; }
+        .faq-item:last-child { border-bottom: none; margin-bottom: 0; padding-bottom: 0; }
+        .faq-question { font-weight: 600; color: #1a1a1a; font-size: 1.1em; margin-bottom: 10px; }
+        .faq-answer { color: #666; line-height: 1.7; }
+        .faq-answer ul { margin: 10px 0 10px 20px; }
+        .faq-answer li { margin: 5px 0; }
+        .contact-section { background: linear-gradient(135deg, #007AFF 0%, #5856D6 100%); color: white; border-radius: 16px; padding: 40px; margin: 40px 0; text-align: center; }
+        .contact-section h2 { color: white; margin-top: 0; }
+        .contact-section p { font-size: 1.1em; margin: 15px 0; opacity: 0.95; }
+        .contact-section a { color: white; font-weight: 600; text-decoration: underline; }
+        .back-link { display: inline-block; margin-top: 30px; color: #007AFF; text-decoration: none; font-weight: 600; }
+        .back-link:hover { text-decoration: underline; }
     </style>
 </head>
 <body>
-<h1>ContactVault Support</h1>
-    
-    <h2>Frequently Asked Questions</h2>
-    
-    <h3>How do I get started?</h3>
-    <p>Download ContactVault from the App Store and follow the onboarding tutorial.</p>
-    
-    <h3>How do I contact support?</h3>
-    <p>Email us at <a href="mailto:iocompile67692@gmail.com">iocompile67692@gmail.com</a></p>
-    
-    <div class="contact">
-        <h2>Contact Us</h2>
-        <p>Email: <a href="mailto:iocompile67692@gmail.com">iocompile67692@gmail.com</a></p>
+    <div class="container">
+        <h1>ContactVault Support</h1>
+        <p class="intro">Find answers to common questions and get help with ContactVault.</p>
+
+        <h2>Frequently Asked Questions</h2>
+        
+        <div class="faq-section">
+            <div class="faq-item">
+                <p class="faq-question">How do I backup my contacts?</p>
+                <p class="faq-answer">Backing up your contacts is simple:</p>
+                <ul>
+                    <li>Open ContactVault and go to the Backup tab</li>
+                    <li>Grant contact access permission when prompted</li>
+                    <li>Select your preferred format (VCF or CSV)</li>
+                    <li>Optionally enable encryption and set a password</li>
+                    <li>Tap "Backup Now" to create your backup</li>
+                </ul>
+            </div>
+
+            <div class="faq-item">
+                <p class="faq-question">What is the difference between VCF and CSV formats?</p>
+                <p class="faq-answer"><strong>VCF (vCard):</strong> The standard format for contact data, universally compatible with all contact applications and devices. Perfect for transferring contacts between phones or restoring to a new device.</p>
+                <p class="faq-answer"><strong>CSV (Comma-Separated Values):</strong> A spreadsheet format that works with Excel, Google Sheets, and other spreadsheet applications. Ideal for viewing, editing, or analyzing your contact data in bulk.</p>
+            </div>
+
+            <div class="faq-item">
+                <p class="faq-question">How does encryption work?</p>
+                <p class="faq-answer">When you enable encryption, ContactVault uses AES-256 encryption to protect your backup file:</p>
+                <ul>
+                    <li>Your backup is encrypted with military-grade AES-256 encryption</li>
+                    <li>Only someone with the password can decrypt and access the data</li>
+                    <li>The password is never stored by the app for security</li>
+                    <li>Perfect for protecting sensitive contact information</li>
+                </ul>
+            </div>
+
+            <div class="faq-item">
+                <p class="faq-question">I forgot my encryption password. Can I recover my backup?</p>
+                <p class="faq-answer">Unfortunately, if you forget your encryption password, the encrypted backup cannot be recovered. This is a security feature - there is no backdoor or password recovery mechanism. We strongly recommend storing your encryption passwords in a secure password manager.</p>
+            </div>
+
+            <div class="faq-item">
+                <p class="faq-question">Does ContactVault send my contacts to a server?</p>
+                <p class="faq-answer"><strong>No, never.</strong> ContactVault processes all data locally on your device. Your contacts never leave your device unless you explicitly choose to share or export them through iOS sharing mechanisms. We have no servers, no cloud storage, and no analytics tracking.</p>
+            </div>
+
+            <div class="faq-item">
+                <p class="faq-question">How do I restore contacts from a backup?</p>
+                <p class="faq-answer">Restoring contacts is easy:</p>
+                <ul>
+                    <li>Go to the Restore tab in ContactVault</li>
+                    <li>Select a backup file from your history</li>
+                    <li>Tap the share button to open it</li>
+                    <li>Choose the iOS Contacts app or any compatible app to import</li>
+                </ul>
+            </div>
+
+            <div class="faq-item">
+                <p class="faq-question">Can I backup contacts from multiple accounts?</p>
+                <p class="faq-answer">Yes! ContactVault can backup contacts from all accounts configured on your device, including iCloud, Gmail, Exchange, and local contacts. All contacts are included in a single comprehensive backup.</p>
+            </div>
+
+            <div class="faq-item">
+                <p class="faq-question">How do backup reminders work?</p>
+                <p class="faq-answer">Backup reminders help you maintain regular backups:</p>
+                <ul>
+                    <li>Go to Settings and enable Backup Reminders</li>
+                    <li>Choose your preferred frequency: daily, weekly, or monthly</li>
+                    <li>You'll receive a notification reminding you to backup</li>
+                    <li>Reminders can be customized or disabled at any time</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="contact-section">
+            <h2>Need More Help?</h2>
+            <p>We're here to assist you with any questions or issues.</p>
+            <p>Email us at: <a href="mailto:asunnyboy861@gmail.com">asunnyboy861@gmail.com</a></p>
+            <p>We typically respond within 24-48 hours.</p>
+        </div>
+
+        <a href="index.html" class="back-link">← Back to Home</a>
     </div>
 </body>
 </html>
